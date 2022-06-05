@@ -5,7 +5,7 @@
 
   .title,
   .audio {
-    font-size: 95px;
+    font-size: 90px;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -30,6 +30,11 @@
     transition: transform 0.7s;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
+    width: 431px;
+    height: 501px;
+    margin: 10px;
+    box-shadow: -1px 2px 13px 4px rgba(0, 0, 0, 0.62);
+    border-radius: 25px;
   }
 
   .front,
@@ -60,12 +65,6 @@
     justify-content: center;
   }
 
-  .card {
-    width: 311px;
-    height: 380px;
-    margin: 10px;
-  }
-
   .front,
   .back {
     box-shadow: 0 1px 6px 0;
@@ -77,6 +76,11 @@
     background-color: white;
     border-radius: 26px;
   }
+  .front {
+    background: url("/images/questionMark3.png") no-repeat;
+    background-repeat: no-repeat;
+    background-size: auto;
+  }
 
   .cardQuestion {
     font-size: 43px;
@@ -86,6 +90,11 @@
     text-align: center;
     align-items: center;
     margin-top: 116px;
+    background-color: #b6e1d7;
+    border: 0px solid white;
+    padding: 10px;
+    border-radius: 25px;
+    border: 10px solid white;
   }
 
   img {
