@@ -1,0 +1,10 @@
+# ignore generated files
+dist/*
+build/*
+node_modules/*
+.tRASHES
+-_*
+.cache
+.vscode
+Desktop.ini
+Thumbs.db
