@@ -10,21 +10,32 @@
   />
 </head>
 
+<!-- 
+  **********************************
+  ************* MUTE ***************
+  ********************************** 
+-->
+
 <button id="button" class="muteMusic">
   <i class="fa fa-volume-up" aria-hidden="true"></i>
 </button>
-<!-- <div class="title">
-<div class="six">
-  <h1>Style Six Heading
-    <span>Example Tagline Text</span>
-  </h1>
-</div>
-</div> -->
+
 <div class="title">
   <h1>Quizz</h1>
       <!-- <span class="titleBellow">Example Tagline Text</span> -->
 </div>
-<!-- <div>For Rachel</div> -->
+
+<!-- 
+  **********************************
+  ********** CHAVES ****************
+  ********************************** 
+-->
+<div class="chavesContainer">
+  <div class="chaves"></div>
+  <div class="chaves"></div>
+  <div class="chaves"></div>
+</div>
+
 
 <div class="audio">
   <!-- <audio src="/musics/musicts.mp3" autoplay="true" controls> -->
@@ -35,18 +46,27 @@
   </audio>
 </div>
 
-<div class="allCards-container">
+<!-- 
+  **********************************
+  ********** CARDS *********
+  ********************************** 
+-->
+
+<div class="allCards-container hidden">
   <div class="cards-container">
     <!--   First Card -->
     <div class="card-container">
       <div class="card">
         <div class="front">
-          <div class="cardQuestion">Qual é a minha cor fav?</div>
+          <div class="cardQuestion">Nosso primeiro jantar fora?</div>
+          <div class="cardResposta" data-resposta="Sushi">Pizza</div>
+          <div class="cardResposta" data-resposta="Sushi">Sushi</div>
+          <div class="cardResposta" data-resposta="Sushi">Carne</div>
         </div>
-        <div class="back">
+        <!-- <div class="back">
           <div class="cardQuestion">Resposta</div>
           <img src="https://api.adorable.io/avatars/150/2" />
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -56,11 +76,14 @@
     <div class="card-container">
       <div class="card">
         <div class="front">
-          <div class="cardQuestion">Qual é a minha cor fav?</div>
+          <div class="cardQuestion tricky">Quem deu o primeiro beijo?</div>
+          <div class="cardResposta tricky button" href="#popup2">Tu</div>
+          <div class="cardResposta tricky button" href="#popup2">Ambos</div>
+          <div class="cardResposta tricky button" href="#popup2">Eu</div>
         </div>
-        <div class="back">
+        <!-- <div class="back">
           <div class="cardQuestion">Resposta</div>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -70,18 +93,81 @@
     <div class="card-container">
       <div class="card">
         <div class="front">
-          <div class="cardQuestion">Qual é a minha cor fav?</div>
-          <img src="https://api.adorable.io/avatars/150/1" />
+          <div class="cardQuestion">Qual a nossa maior síntonia?</div>
+          <div class="cardResposta" data-resposta="Pensamentos">Opiniões</div>
+          <div class="cardResposta" data-resposta="Pensamentos">Gostos</div>
+          <div class="cardResposta" data-resposta="Pensamentos">Pensamentos</div>
         </div>
-        <div class="back">
+        <!-- <div class="back">
           <div class="cardQuestion">Resposta</div>
           <img src="https://api.adorable.io/avatars/150/2" />
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 
+  **********************************
+  ********** CHAVES FINAIS *********
+  ********************************** 
+-->
+
+<div class="allCards-container chavesFinaisContainer">
+  <div class="chaves-container">
+    <!--   First Card -->
+    <div class="chave-container">
+      <div class="chave">
+        <div class="frontChave">
+
+        </div>
+        <div class="backChave">
+          <div class="cardQuestion">Pista 🔎</div>
+          <div class="cardQuestion">Branco como as nuvens, macia como o algodão</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chaves-container">
+    <!--   First Card -->
+    <div class="chave-container">
+      <div class="chave">
+        <div class="frontChave">
+
+        </div>
+        <div class="backChave">
+          <div class="cardQuestion">Pista 🔎</div>
+          <div class="cardQuestion">👫 + 🚗 + 💆🏻 + 🌙</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="chaves-container">
+    <!--   First Card -->
+    <div class="chave-container">
+      <div class="chave">
+        <div class="frontChave">
+
+        </div>
+        <div class="backChave">
+          <div class="cardQuestion">Pista 🔎</div>
+          <div class="cardQuestion">Queres ***** comigo?</div>
         </div>
       </div>
     </div>
   </div>
 </div>
-  <!-- ***** JOGO DA FORCA ***** -->
+
+<div id="wrapper" class="hidden">
+	<p><a class="button" href="#popup2">Click Me Too</a></p>
+</div>
+<!-- 
+  **********************************
+  ********** JOGO DA FORCA *********
+  ********************************** 
+-->
   <div class="forcaBody">
     <div class="box-container">
       <div id="box-secreta">
@@ -188,6 +274,22 @@
     </div>
   </div>
 
+<!-- 
+  **********************************
+  ********** POP UP *********
+  ********************************** 
+-->
+<div id="popup2" class="overlay light">
+	<a class="cancel" href="#"></a>
+	<div class="popup">
+		<h2>Hmmmmmm 🤔 😉</h2>
+		<h3>Certeza?</h3>
+		<div class="content">
+      <a class="cancel botaoContinuarPOPUP" href="#">Continuar</a>
+		</div>
+	</div>
+</div>
+
   <script>
     //$(document).ready(function () {
     //initializeHome();
@@ -213,5 +315,48 @@
       }
       button.classList.add("fade");
     });
+
+    // ******* RESPOSTAS *********
+    var chavesRecebidas = [0,0,0];
+    var atual = 0;
+
+    $(".cardResposta:not(.tricky)").click(function () {
+      var choosen = $(this);
+      //choosen.css('box-shadow', 'inset 0px 10px 15px -3px rgba(0,0,0,0.1)');
+      choosen.css('background-color', 'rgb(233 233 233)');
+      if(choosen.attr('data-resposta') == choosen.text()){
+        choosen.css('box-shadow', 'rgb(51 139 22) 1px 0px 11px 12px');
+
+        // Give 1 key
+
+        $('.chaves').eq(atual).css('background-image','url("/images/key.png")');
+        $('.chaves').eq(atual).css('background-repeat','no-repeat');
+        $('.chaves').eq(atual).css('background-position','center');
+        $('.chaves').eq(atual).css('background-size','cover');
+        chavesRecebidas[atual] = 1;
+        atual++
+      }else{
+        choosen.css('box-shadow', 'rgb(201 72 42) 1px 0px 11px 12px');
+      }
+      
+    });
+    $(".cardResposta.tricky").click(function () {
+      var choosen = $(this);
+      
+      //Abre POPUP
+      $('#wrapper p a')[0].click();
+
+      choosen.css('background-color', 'rgb(233 233 233)');
+      choosen.css('box-shadow', 'rgb(51 139 22) 1px 0px 11px 12px');
+
+      // Give 1 key
+      $('.chaves').eq(atual).css('background-image','url("/images/key.png")');
+      $('.chaves').eq(atual).css('background-repeat','no-repeat');
+      $('.chaves').eq(atual).css('background-position','center');
+      $('.chaves').eq(atual).css('background-size','cover');
+      chavesRecebidas[atual] = 1;
+      atual++
+    });
+
   </script>
 
